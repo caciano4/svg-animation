@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+#Roda-esquerda,
+#Roda-direita {
+  animation: wheel 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#bone {
+  animation: bone 1s infinite alternate;
+  transform-origin: cennter;
+  transform-box: fill-box;
+}
+#man-bike {
+  animation: bike-man 1s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bike-man {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+@keyframes bone {
+  from {
+    transform: translateX(0%) translateY(-5%) rotateZ(0deg);
+  }
+  to {
+    transform: translateX(9%) translateY(15%) rotateZ(10deg);
+  }
+}
